@@ -1,48 +1,141 @@
-
+* {
+  box-sizing: border-box;
+}
 
 body {
+  background-color: #333 !important;
+  color: #fff;
   font-family: "Oswald";
   text-align: center;
+  margin: 30px 10px 300px;
 }
 
-h1 {
-  font-size: 40px;
+.App {
+  max-width: 960px;
+  margin: auto;
 }
 
-p {
-  font-weight: 100;
-  font-size: 16px;
-  letter-spacing: 0.5px;
+.search-container {
+  position: relative;
 }
 
-imp {
-  margin: 10px;
-  object-fit: cover;
-}
-hr {
-  margin: 20px 25px;
-}
-
-.gallery {
-  margin:  0 5%;
-}
-
-button {
-  margin: 20px;
-  border-width: 1px;
-  border-style: solid;
-  color: #000;
-  padding: 20px;
-  background: none;
-
+.search-container input {  
+  font-size: 1em;
+  background-color: #edeff0;
+  padding: 10px 15px;
+  border: 3px solid #d7dbdf;
+  border-right: none;
+  border-radius: 0.35em 0 0 0.35em;
+  outline: none;
+  height: 35px;
+  width: 100%;
 }
 
-button:hover {
-  background: #000;
+.search-container button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #C00;
   color: #FFF;
+  height: 35px;
+  outline: 0;
+  width: 20%;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
   cursor: pointer;
 }
 
-Image {
-  text-align: left;
+.Gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
 }
+
+.single-image {
+  position: relative; 
+  max-width: 500px;
+}
+
+.single-image img {
+  width: 100%;
+}
+
+.single-image:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.single-image p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+}
+
+
+.single-image:hover p {
+  visibility: visible;
+  opacity: 1;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.pagination {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pagination button {
+  font-size: 1.3rem;
+  padding: 0.5em;
+  cursor: pointer;
+  width: 170px;
+  height: 50px;
+}
+
+.pagination button:hover {
+  border: none;
+    -webkit-transition: background-color 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
+}
+.view-more {
+  background-color: #2e86c0;
+  border-color: #337cac;
+  color: #FFF;
+}
+
+.view-more:hover {
+  background-color: #2e86c052
+}
+
+.previous {
+  background-color: #f0595f;
+  color: #fff;
+}
+
+.previous:hover {
+  background-color: #f0595e50
+}
+

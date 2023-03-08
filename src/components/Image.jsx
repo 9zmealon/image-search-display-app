@@ -1,20 +1,17 @@
 const Image = ({data}) => {
     return (
-        <>
+        <div className="single-image" 
+        key={data.id}>
         <a href={data.url}>
-            <>{data.id}. </>
             <img
-                key={data.id}
                 alt={data.title}
                 src={data.thumbnailUrl}
-                width="50"
-                height= "50"
+                width="250"
+                height= "250"
             />
-        <br />
-            <>{data.title}</>
+            <p>{data.title}</p>
         </a>
-        <br/>
-        </>
+        </div>
         
     )
 };

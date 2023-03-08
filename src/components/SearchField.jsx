@@ -19,18 +19,18 @@ const SearchField = ({photos, searchClick}) => {
         searchClick(a);
     }
     return (
-        <div>
+        <>
             <input
                 type="search"
-                placeholder="search aything..."    
+                placeholder="Search Anything...."    
                 value={searchValue}
                 onChange={handleInputChange}        
             />
             <button
                 onClick={handleButtonSearch}
                 disabled={!searchValue}
-            >search</button>
-        </div>
+            >Search</button>
+        </>
     )
 };
 export default SearchField; 
